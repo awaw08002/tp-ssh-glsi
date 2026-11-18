@@ -95,7 +95,10 @@ Test de connexion sans mot de passe :
 
 <img width="920" height="401" alt="Screenshot 2026-11-18 010851" src="https://github.com/user-attachments/assets/e1b514ad-5587-4c9c-ad87-15c8ce59fbd6" />
 
-![curl](captures/serveur-10b-curl.png)
+<img width="929" height="387" alt="Screenshot 2026-11-18 183011" src="https://github.com/user-attachments/assets/1e21c81c-5b91-4cb9-9cae-7a9ff65b998b" />
+<img width="931" height="410" alt="Screenshot 2026-11-18 183022" src="https://github.com/user-attachments/assets/95f03a60-1498-497a-8f99-8b1410a9b5ac" />
+
+
 
 Le client crée le tunnel depuis son poste :
 
