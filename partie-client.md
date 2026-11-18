@@ -1,7 +1,7 @@
 # Partie client (macOS)
 
 **Auteur :** Gana Diop – MacBook Air, macOS
-**Serveur du binôme (Awa) :** Ubuntu 26.04.1 LTS – adresse Tailscale `100.74.190.125`
+**Serveur du binôme (Awa War) :** Ubuntu 26.04.1 LTS – adresse Tailscale `100.74.190.125`
 
 ---
 
@@ -67,14 +67,14 @@ Je donne ensuite à ma binôme mon nom d'utilisateur (`ganadiop`) et mon adresse
 tailscale ip -4
 ```
 
-Adresse de mon Mac : _à compléter_
+Adresse Tailscale de mon Mac : `100.112.180.28`
 
 ![Session à distance activée](captures/06_session_distance.png)
 
 ### 3.2 Commande exécutée par ma binôme (sur le serveur)
 
 ```bash
-scp ~/.ssh/id_ed25519.pub ganadiop@IP_TAILSCALE_DE_MON_MAC:/Users/ganadiop/
+scp ~/.ssh/id_ed25519.pub ganadiop@100.112.180.28:/Users/ganadiop/
 ```
 
 ### 3.3 Vérification chez moi
@@ -119,30 +119,6 @@ mysql -h 127.0.0.1 -P 3307 -u tpuser -p tpdb
 
 ![Tunnel MariaDB](captures/10_tunnel_mariadb.png)
 ![Requêtes SQL](captures/11_requetes_sql.png)
-
----
-
-## Annexe : paire de clés générée sur le client
-
-En complément, j'ai aussi généré une paire de clés sur mon Mac. Dans ce sens (clé privée sur le client, clé publique copiée dans `~/.ssh/authorized_keys` du serveur avec `ssh-copy-id`), la connexion se fait sans mot de passe.
-
-```bash
-ssh-keygen -t ed25519
-ls -a ~/.ssh
-cat ~/.ssh/id_ed25519.pub
-```
-
-Empreinte :
-
-```
-SHA256:zJ2KKvS/7h4imbEH+FOqdv216lqa7RPD2A0L0wJK+zk ganadiop@macbookair.home
-```
-
-![ssh-keygen](captures/02_ssh-keygen.png)
-![Contenu de ~/.ssh](captures/03_ls_ssh.png)
-![Clé publique](captures/04_cle_publique.png)
-
-> La clé privée n'est jamais partagée ni envoyée sur GitHub.
 
 ---
 
