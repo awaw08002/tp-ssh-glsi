@@ -23,11 +23,13 @@ Vérification de la version installée :
 
 Vérification du service (état `active (running)`) :
 
-![statut ssh](captures/serveur-02-ssh-status.png)
+<img width="925" height="408" alt="Screenshot 2026-11-18 004629" src="https://github.com/user-attachments/assets/0c49caf5-ce58-405b-af8e-0f4943068579" />
+
 
 Vérification du port 22 :
 
-![port 22](captures/serveur-03-port-22.png)
+<img width="926" height="91" alt="Screenshot 2026-11-18 005643" src="https://github.com/user-attachments/assets/e05932b0-eb62-4c42-a52d-79544333794d" />
+
 
 **Explication** : le serveur OpenSSH est installé et actif. Il écoute sur le port 22 (état `LISTEN`).
 
@@ -37,15 +39,18 @@ Vérification du port 22 :
 
 Adresses IP du serveur :
 
-![adresses ip](captures/serveur-04-ip.png)
+<img width="368" height="33" alt="Screenshot 2026-11-18 005828" src="https://github.com/user-attachments/assets/d95d774e-74b7-412e-9788-db7869fcd247" />
+
 
 Statut Tailscale :
 
-![tailscale](captures/serveur-05-tailscale-status.png)
+<img width="448" height="67" alt="Screenshot 2026-11-18 005837" src="https://github.com/user-attachments/assets/0cf6d506-7099-4ad8-9351-2b76650c0b8c" />
+
 
 Test de communication avec le client (ping) :
 
-![ping client](captures/serveur-04b-ping-client.png)
+<img width="481" height="237" alt="Screenshot 2026-11-18 114128" src="https://github.com/user-attachments/assets/b16fad75-1b29-4bea-8e0c-48a6663be0eb" />
+
 
 **Explication** : les deux machines n'étant pas sur le même réseau, nous avons utilisé Tailscale. Le ping répond sans perte de paquets, donc la liaison fonctionne. Le client se connecte ensuite avec `ssh awa@100.74.190.125`.
 
@@ -57,21 +62,25 @@ Génération de la paire de clés sur le serveur :
 
     ssh-keygen -t rsa
 
-![keygen](captures/serveur-06-keygen.png)
+<img width="932" height="410" alt="Screenshot 2026-11-18 113209" src="https://github.com/user-attachments/assets/c22fa596-c2bb-4d6e-b568-c811d8b53356" />
+
 
 Vérification des fichiers créés (`id_rsa` : clé privée, `id_rsa.pub` : clé publique) :
 
-![ls ssh](captures/serveur-07-ls-ssh.png)
+<img width="924" height="123" alt="Screenshot 2026-11-18 113232" src="https://github.com/user-attachments/assets/a9d2f123-cfab-42f8-9992-cf060c336221" />
+
 
 Envoi de la clé publique au client avec scp :
 
     scp id_rsa.pub ganadiop@100.112.180.28:~/
 
-![scp](captures/serveur-08-scp.png)
+<img width="923" height="67" alt="Screenshot 2026-11-18 141843(1)" src="https://github.com/user-attachments/assets/73a8a856-fe5b-44ea-aa0e-0165c5053d1d" />
+
 
 Test de connexion sans mot de passe :
 
-![sans mot de passe](captures/serveur-09-connexion-sans-mdp.png)
+<img width="422" height="44" alt="Screenshot 2026-11-18 182330" src="https://github.com/user-attachments/assets/328c34d4-a9ad-4077-933f-5db279aa7cba" />
+
 
 **Explication** : la clé privée reste sur le serveur. Seule la clé publique est envoyée. Pour que la connexion ne demande plus de mot de passe, la clé publique doit être ajoutée au fichier `~/.ssh/authorized_keys` de la machine qui accepte la connexion.
 
@@ -84,7 +93,8 @@ Test de connexion sans mot de passe :
     sudo apt install apache2
     systemctl status apache2
 
-![apache](captures/serveur-10-apache.png)
+<img width="920" height="401" alt="Screenshot 2026-11-18 010851" src="https://github.com/user-attachments/assets/e1b514ad-5587-4c9c-ad87-15c8ce59fbd6" />
+
 ![curl](captures/serveur-10b-curl.png)
 
 Le client crée le tunnel depuis son poste :
@@ -98,11 +108,13 @@ puis ouvre `http://localhost:1024` dans son navigateur (voir la partie client).
     sudo apt install mariadb-server
     systemctl status mariadb
 
-![mariadb](captures/serveur-11-mariadb.png)
+<img width="928" height="413" alt="Screenshot 2026-11-18 152028" src="https://github.com/user-attachments/assets/43b9b7c1-e6af-45eb-9c12-e83bd836a3dd" />
+
 
 Création de l'utilisateur de test (`tpuser`) :
 
-![utilisateur](captures/serveur-12-mariadb-user.png)
+<img width="926" height="247" alt="Screenshot 2026-11-18 171104" src="https://github.com/user-attachments/assets/62260618-f05a-4430-b61d-566d9972d007" />
+
 
 Le client crée le tunnel :
 
