@@ -18,7 +18,8 @@ Commandes :
 
 Vérification de la version installée :
 
-![version openssh](captures/serveur-01-apt-policy.png)
+<img width="925" height="439" alt="Screenshot 2026-11-18 004612" src="https://github.com/user-attachments/assets/b26bc7a9-dfe4-43f0-9c70-5aebb4aa8c0d" />
+
 
 Vérification du service (état `active (running)`) :
 
