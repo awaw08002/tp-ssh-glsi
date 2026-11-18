@@ -18,12 +18,14 @@ Commandes :
 
 Vérification de la version installée :
 
-<img width="925" height="439" alt="Screenshot 2026-11-18 004612" src="https://github.com/user-attachments/assets/b26bc7a9-dfe4-43f0-9c70-5aebb4aa8c0d" />
+<img width="929" height="158" alt="Screenshot 2026-11-18 005613" src="https://github.com/user-attachments/assets/896a712e-b9ee-41f6-ab2d-f145cd935d0b" />
+
 
 
 Vérification du service (état `active (running)`) :
 
-<img width="925" height="408" alt="Screenshot 2026-11-18 004629" src="https://github.com/user-attachments/assets/0c49caf5-ce58-405b-af8e-0f4943068579" />
+<img width="928" height="343" alt="Screenshot 2026-11-18 005628" src="https://github.com/user-attachments/assets/60d6fc97-27a3-45f5-bdfe-f8d046a58e93" />
+
 
 
 Vérification du port 22 :
