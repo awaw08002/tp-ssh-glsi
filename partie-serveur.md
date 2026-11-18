@@ -131,7 +131,8 @@ puis se connecte avec :
 
 Connexion du client vue depuis le serveur :
 
-![processlist](captures/serveur-13-processlist.png)
+<img width="816" height="118" alt="Screenshot 2026-11-18 185316" src="https://github.com/user-attachments/assets/66bc2d07-bc6e-4fca-bff6-06c534c3c32a" />
+
 
 **Explication** : un tunnel SSH fait passer d'autres protocoles (HTTP, MySQL) à l'intérieur d'une connexion SSH chiffrée. Apache (port 80) et MariaDB (port 3306) n'écoutent qu'en local sur le serveur, mais le client y accède à travers le tunnel, uniquement via le port 22.
 
